@@ -1,0 +1,26 @@
+apt-get install php-fpm
+
+vim /etc/nginx/sites-enabled/site1.cl #enable php
+
+nginx -t
+systemctl reload nginx
+systemctl status nginx
+
+cd /var/www/site1/
+vim info.php
+
+tail -f /var/log/nginx/error.log
+vim /etc/nginx/sites-enabled/site1.cl
+
+apt-get install mysql-server php-mysql
+unzip phpMyAdmin-5.0.4-all-languages.zip 
+mv phpMyAdmin-5.0.4-all-languages/ phpmyadmin/
+
+vim /etc/nginx/sites-enabled/site1.cl #enable index.php
+nginx -t
+systemctl reload nginx
+systemctl status nginx
+
+mysqladmin --user=root passsword "mt2h3345"
+
+mysql -u root -p

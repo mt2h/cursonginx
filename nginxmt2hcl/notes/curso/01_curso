@@ -1,0 +1,8 @@
+nginx -h
+nginx -v
+nginx -t
+
+service nginx status
+systemctl status nginx
+nginx -s stop
+systemctl start nginx

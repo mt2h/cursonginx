@@ -1,0 +1,31 @@
+apt-get install nginx
+
+cd /etc/nginx/cd sites-available
+cp default site1.cl
+cp default site2.cl
+
+vim site1.cl
+vim site2.cl
+
+cd sites-enabled/
+
+ln -s ../sites-available/site1.cl
+ln -s ../sites-available/site2.cl
+
+vim site1.cl
+vim site2.cl
+
+ginx -s reload
+
+cd /var/www/
+mkdir site1
+mkdir site2
+
+cd site1/
+vim index.html
+
+cd ../site2/
+vim index.html
+
+ginx -s reload
+
